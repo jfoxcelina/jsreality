@@ -9,22 +9,13 @@ var domReady = function(callback) {
 };
 
 domReady(function() {
-    console.log('domReady');
     setup();
 });
 
 function setup() {
-
-    console.log('setUp');
-
     SCENE = document.getElementById('scene');
-
-    console.log(SCENE);
-
     addCylinder({x: -1.5, y: 1, z: -3.5}, '#EE335F');
-    //addCylinder({x: 1.5, y: 1, z: -4}, '#00BBDD');
-
-    console.log(SCENE);
+    addCylinder({x: 1.5, y: 1, z: -4}, '#00BBDD');
 }
 
 function addCylinder(position, color) {
