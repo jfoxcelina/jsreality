@@ -17,18 +17,17 @@ function setup() {
 
     console.log('setUp');
 
-    SCENE = document.querySelector('a-scene');
-    
+    SCENE = document.getElementById('scene');
+
     console.log(SCENE);
 
     addCylinder({x: -1.5, y: 1, z: -3.5}, '#EE335F');
     //addCylinder({x: 1.5, y: 1, z: -4}, '#00BBDD');
+
+    console.log(SCENE);
 }
 
 function addCylinder(position, color) {
-    
-    console.log(SCENE);
-    
     var cylinder = document.createElement('a-cylinder');
 
     cylinder.setAttribute('color', color);
