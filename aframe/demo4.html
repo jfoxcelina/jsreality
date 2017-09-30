@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A-Frame Demo 4</title>
+    <script src="js/lib/aframe-v0.7.0.min.js"></script>
+    <script src='js/lib/aframe-keyboard-controls.min.js'></script>
+    <script src='js/demo4.js'></script>
+</head>
+
+<body>
+    <a-scene>
+
+        <a-camera position="0 3 5"></a-camera>
+
+        <a-sound id="prsound" src="src: url(assets/pickle_rick.mp3)" autoplay="false" volume="1"></a-sound>
+
+        <a-gltf-model id="picklerick" src="models/picklerick/picklerick.gltf" position="0 3.5 -1.6" keyboard-controls></a-gltf-model>
+
+        <a-plane position="0 0 -5" rotation="-90 0 0" width="20" height="20" color="grey" src="assets/checkerboard.png"></a-plane>
+
+        <a-sky color="#333"></a-sky>
+
+    </a-scene>
+
+</body>
+
+</html>

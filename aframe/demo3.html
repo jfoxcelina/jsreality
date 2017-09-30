@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A-Frame Demo 3</title>
+    <script src="js/lib/aframe-v0.7.0.min.js"></script>
+    <script src='js/demo3.js'></script>
+</head>
+
+<body>
+    <a-scene>
+
+        <a-camera position="0 3 4" look-controls wasd-controls>
+            <a-entity cursor="fuse: false" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: blue; shader: flat"></a-entity>
+        </a-camera>
+
+        <a-box box-cursor-listener src="assets/checkerboard.png" position="0 2 -2" scale="2 2 2" color="yellow">
+            <a-animation attribute="rotation" begin="spin" dur="2500" to="360 0 360" repeat="0"></a-animation>
+        </a-box>
+
+        <a-box box-cursor-listener src="assets/checkerboard.png" position="-3 2 -2" scale="2 2 2" color="green">
+            <a-animation attribute="rotation" begin="spin" dur="2500" to="360 0 360" repeat="0"></a-animation>
+        </a-box>
+
+        <a-box box-cursor-listener src="assets/checkerboard.png" position="3 2 -2" scale="2 2 2" color="red">
+            <a-animation attribute="rotation" begin="spin" dur="2500" to="360 0 360" repeat="0"></a-animation>
+        </a-box>
+
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="30" height="30" color="grey"></a-plane>
+
+        <a-sky color="#ECECEC"></a-sky>
+
+    </a-scene>
+
+</body>
+
+</html>
