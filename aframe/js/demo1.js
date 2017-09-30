@@ -11,6 +11,14 @@ var domReady = function(callback) {
 domReady(function() {
     console.log('domReady');
     setup();
+});
+
+function setup() {
+
+    console.log('setUp');
+
+    SCENE = document.querySelector('a-scene');
+
     addCylinder({
         x: -1.5,
         y: 1,
@@ -21,10 +29,6 @@ domReady(function() {
         y: 1,
         z: -4
     }, '#00BBDD');
-});
-
-function setup() {
-    SCENE = document.querySelector('a-scene');
 }
 
 function addCylinder(position, color) {
