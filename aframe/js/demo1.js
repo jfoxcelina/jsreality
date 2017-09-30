@@ -19,12 +19,12 @@ function setup() {
 
     SCENE = document.querySelector('a-scene');
 
-    addCylinder({
+    //addCylinder({
         x: -1.5,
         y: 1,
         z: -3.5
     }, '#EE335F');
-    addCylinder({
+    //addCylinder({
         x: 1.5,
         y: 1,
         z: -4
