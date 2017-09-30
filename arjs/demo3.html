@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <script src="js/aframe.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+    <a-sky color="grey"></a-sky>
+
+    <a-assets>
+      <a-asset-item id="android-obj" src="models/android/model.obj"></a-asset-item>
+      <a-asset-item id="android-mtl" src="models/android/materials.mtl"></a-asset-item>
+    </a-assets>
+    <a-entity obj-model="obj: #android-obj; mtl: #android-mtl" position="0 1.25 -2.5" rotation="0 180 0"></a-entity>
+
+    <a-assets>
+      <a-asset-item id="claptrap-obj" src="models/claptrap/model.obj"></a-asset-item>
+      <a-asset-item id="claptrap-mtl" src="models/claptrap/materials.mtl"></a-asset-item>
+    </a-assets>
+    <!-- <a-entity obj-model="obj: #claptrap-obj; mtl: #claptrap-mtl" position="0 1.2 -1.5" rotation="0 90 0"></a-entity> -->
+
+    <a-assets>
+    <a-asset-item id="pumpkin" src="models/pumpkin/scene.gltf" position="0 0 0" scale=".5 .5 .5"></a-asset-item>
+  </a-assets>
+  <a-entity gltf-model="#pumpkin"></a-entity>
+
+
+  </a-scene>
+</body>
+
+</html>
