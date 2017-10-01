@@ -1,5 +1,5 @@
-<script src="js/aframe.min.js"></script>
-<script src='js/aframe-ar.min.js'></script>
+<script src='js/lib/aframe-v0.7.0.min.js'></script>
+<script src='js/lib/aframe-ar.min.js'></script>
 
 <body style='margin : 0px; overflow: hidden;'>
 
@@ -7,17 +7,19 @@
 
     <a-entity camera></a-entity>
 
-    <a-marker preset='hiro'>
-      <a-torus position='0 0.5 0' radius='0.26' radius-tubular='0.05' material='opacity: 1;  color:blue;'>
-        <a-animation attribute="rotation" to="0 360 0" dur="3000" easing='linear' repeat="indefinite"></a-animation>
-      </a-torus>
+    <a-marker preset='kanji'>
+      <!-- <a-torus position='0 0.5 0' radius='0.26' radius-tubular='0.05' material='opacity:1;  color:green;'></a-torus> -->
+      <!-- <a-gltf-model src="models/pumpkin/pumpkin.gltf" scale="3 3 3" rotation="70 180 0"></a-gltf-model> -->
+      <a-gltf-model src="models/trump/trump.gltf" rotation="-80 0 0"  scale="1.5 1.5 1.5"></a-gltf-model>
     </a-marker>
 
-    <a-marker preset='kanji'>
-      <a-torus position='0 0.5 0' radius='0.26' radius-tubular='0.05' material='opacity:1;  color:green;'>
-        <a-animation attribute="rotation" to="0 -360 0" dur="3000" easing='linear' repeat="indefinite"></a-animation>
-      </a-torus>
+
+
+    <a-marker preset='hiro'>
+      <!-- <a-torus position='0 0.5 0' radius='0.26' radius-tubular='0.05' material='opacity: 1;  color:blue;' rotation='90 0 0' scale='5 5 5'></a-torus> -->
+      <!-- <a-gltf-model src="models/trump/trump.gltf" rotation="-90 0 0"  scale="1 1 1"></a-gltf-model> -->
     </a-marker>
+
 
   </a-scene>
 
