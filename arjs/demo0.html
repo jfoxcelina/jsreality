@@ -2,11 +2,12 @@
 <script src='js/lib/aframe-ar.min.js'></script>
 
 <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs>
-
-        <a-marker-camera preset='hiro' look-controls></a-marker-camera>
-
-        <a-gltf-model src="models/pumpkin/pumpkin.gltf" scale=".25 .25 .25" rotation="45 180 0"></a-gltf-model>
-        
+    <a-scene embedded arjs='trackingMethod: best;'>
+        <a-entity camera></a-entity>
+        <a-marker preset='hiro'>
+            <a-torus-knot radius='0.26' radius-tubular='0.05' color='blue' opacity='0.85'>
+                <a-animation attribute='rotation' to='360 360 360' dur='3000' easing='linear' repeat='indefinite'></a-animation>
+            </a-torus-knot>
+        </a-marker>
     </a-scene>
 </body>

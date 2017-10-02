@@ -2,8 +2,10 @@
 <script src='js/lib/aframe-ar.min.js'></script>
 
 <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs>
-        <a-marker-camera preset='hiro'></a-marker-camera>
-        <a-gltf-model src="models/pumpkin/pumpkin.gltf" scale="1.25 1.25 1.25" rotation="90 180 0"></a-gltf-model>
-    </a-scene>
+  <a-scene embedded arjs='trackingMethod: best;'>
+      <a-entity camera></a-entity>
+      <a-marker preset='kanji'>
+        <a-gltf-model src='models/skull/skull.gltf' scale='3 3 3' rotation='-75 0 0'></a-gltf-model>
+      </a-marker>
+  </a-scene>
 </body>
