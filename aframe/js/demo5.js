@@ -1,16 +1,6 @@
 'use strict';
 
-var domReady = function(callback) {
-    document.readyState === "interactive" || document.readyState === "complete"
-        ? callback()
-        : document.addEventListener("DOMContentLoaded", callback);
-};
-
-domReady(function() {
-    setup();
-});
-
-function setup() {
+function main() {
 
     var model = document.getElementById('model');
 
@@ -20,7 +10,7 @@ function setup() {
 
 }
 
-function buttonHandler(model, button) {    
+function buttonHandler(model, button) {
     switch (button) {
 
         case(0):

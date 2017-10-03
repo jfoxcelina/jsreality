@@ -4,14 +4,14 @@
 <head>
     <title>A-Frame Demo 5</title>
     <script src="js/lib/aframe-v0.7.0.min.js"></script>
+    <script src="js/main.js"></script>
     <script src='js/lib/aframe-gamepad-controls.min.js'></script>
+    <script src='js/demo5.js'></script>
 </head>
 
 <body>
-    <a-scene>
-
+    <a-scene main>
         <a-camera id="camera" position="0 1.6 2"></a-camera>
-
         <a-gltf-model id="model" src="models/skull/scene.gltf" position="0 3 -1" gamepad-controls="invertAxisY: true">
 
             <a-animation attribute="rotation" begin="spinLeft" dur="3000" from="0 0 0" to="0 -360 0" easing="ease-expo" repeat="0"></a-animation>
@@ -23,13 +23,7 @@
         </a-gltf-model>
 
         <a-plane position="0 0 -5" rotation="-90 0 0" width="30" height="30" color="grey" src="assets/checkerboard.png"></a-plane>
-
         <a-sky color="#333"></a-sky>
-
     </a-scene>
-
-    <script src='js/demo5.js'></script>
-
 </body>
-
 </html>
