@@ -1,7 +1,31 @@
 'use strict';
 
-var CAMERA,
-    SCENE;
+function main(sceneEl) {
+    var CAMERA = document.getElementById('camera');
+
+    CAMERA.setAttribute('position', {
+        x: 0,
+        y: 3.5,
+        z: 5.5
+    });
+    
+    addSpheres(sceneEl);
+}
+
+function addSpheres(sceneEl) {
+    sphereData.forEach(function(sphereData) {
+        addSphere(sceneEl,sphereData)
+    });
+}
+
+function addSphere(sceneEl, sphereData) {
+    var sphere = document.createElement('a-sphere');
+    sphere.setAttribute('id', sphereData.id);
+    sphere.setAttribute('color', sphereData.color);
+    sphere.setAttribute('radius', sphereData.radius);
+    sphere.setAttribute('position', sphereData.position);
+    sceneEl.appendChild(sphere);
+}
 
 var sphereData = [
     {
@@ -87,39 +111,3 @@ var sphereData = [
         radius: '.45'
     }
 ];
-
-var domReady = function(callback) {
-    document.readyState === "interactive" || document.readyState === "complete"
-        ? callback()
-        : document.addEventListener("DOMContentLoaded", callback);
-};
-
-domReady(function() {
-    setup();
-    addSpheres();
-});
-
-function setup() {
-    SCENE = document.querySelector('a-scene');
-    CAMERA = document.getElementById('camera');
-    CAMERA.setAttribute('position', {
-        x: 0,
-        y: 3.5,
-        z: 5.5
-    });
-}
-
-function addSphere(props) {
-    var sphere = document.createElement('a-sphere');
-    sphere.setAttribute('id', props.id);
-    sphere.setAttribute('color', props.color);
-    sphere.setAttribute('radius', props.radius);
-    sphere.setAttribute('position', props.position);
-    SCENE.appendChild(sphere);
-}
-
-function addSpheres() {
-    sphereData.forEach(function(sphere) {
-        addSphere(sphere)
-    });
-}
