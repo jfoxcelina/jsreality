@@ -9,7 +9,7 @@ AFRAME.registerComponent('box-cursor-listener', {
 });
 
 function main(){
-    console.log('main');
+    
 }
 
 function animateBox(el){
