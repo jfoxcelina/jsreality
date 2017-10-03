@@ -1,8 +1,5 @@
-'use strict';
-
-function main() {
+function sceneSetup() {
     var pumpkin = document.getElementById('pumpkin');
-
     doLeap(pumpkin);
 }
 

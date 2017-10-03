@@ -1,5 +1,3 @@
-'use strict';
-
 function main() {
     var picklerick = document.getElementById('picklerick');
     var prsound = document.getElementById('prsound');

@@ -1,5 +1,3 @@
-'use strict';
-
 function main() {
 
     var model = document.getElementById('model');
