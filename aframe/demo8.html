@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A-Frame - AR.js Demo 7</title>
+    <script src="js/lib/aframe-v0.7.0.min.js"></script>
+    <script src='js/lib/aframe-ar.min.js'></script>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs='trackingMethod: best;'>
+        <a-entity camera></a-entity>
+        <a-marker preset='hiro'>
+          <a-gltf-model src='models/pumpkin/pumpkin.gltf' scale='.25 .25 .25' rotation='60 180 0'></a-gltf-model>
+        </a-marker>
+    </a-scene>
+</body>
+
+</html>
