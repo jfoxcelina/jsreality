@@ -1,30 +1,34 @@
-'use strict';
+function sceneSetup() {
+    console.log('sceneSetup');
+    addSpheres();
+}
 
-function main(sceneEl) {
-    var CAMERA = document.getElementById('camera');
+function cameraSetup() {
+    console.log('cameraSetup');
+    positionCamera();
+}
 
+function positionCamera(){
     CAMERA.setAttribute('position', {
         x: 0,
         y: 3.5,
         z: 5.5
     });
-    
-    addSpheres(sceneEl);
 }
 
-function addSpheres(sceneEl) {
+function addSpheres() {
     sphereData.forEach(function(sphereData) {
-        addSphere(sceneEl,sphereData)
+        addSphere(sphereData)
     });
 }
 
-function addSphere(sceneEl, sphereData) {
+function addSphere(sphereData) {
     var sphere = document.createElement('a-sphere');
     sphere.setAttribute('id', sphereData.id);
     sphere.setAttribute('color', sphereData.color);
     sphere.setAttribute('radius', sphereData.radius);
     sphere.setAttribute('position', sphereData.position);
-    sceneEl.appendChild(sphere);
+    SCENE.appendChild(sphere);
 }
 
 var sphereData = [

@@ -1,11 +1,10 @@
-'use strict';
-
-function main(sceneEl) {
-    addCylinder(sceneEl,{x: -1.5, y: 1, z: -3.5}, '#EE335F');
-    addCylinder(sceneEl,{x: 1.5, y: 1, z: -4}, '#00BBDD');
+function sceneSetup() {
+    console.log('sceneSetup');
+    addCylinder({x: -1.5, y: 1, z: -3.5}, '#EE335F');
+    addCylinder({x: 1.5, y: 1, z: -4}, '#00BBDD');
 }
 
-function addCylinder(sceneEl, position, color) {
+function addCylinder(position, color) {
     var cylinder = document.createElement('a-cylinder');
 
     cylinder.setAttribute('color', color);
@@ -13,5 +12,5 @@ function addCylinder(sceneEl, position, color) {
     cylinder.setAttribute('radius', '0.75');
     cylinder.setAttribute('position', position);
 
-    sceneEl.appendChild(cylinder);
+    SCENE.appendChild(cylinder);
 }
