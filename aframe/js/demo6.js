@@ -1,16 +1,6 @@
 'use strict';
 
-var domReady = function(callback) {
-    document.readyState === "interactive" || document.readyState === "complete"
-        ? callback()
-        : document.addEventListener("DOMContentLoaded", callback);
-};
-
-domReady(function() {
-    setup();
-});
-
-function setup() {
+function main() {
     var pumpkin = document.getElementById('pumpkin');
 
     doLeap(pumpkin);
